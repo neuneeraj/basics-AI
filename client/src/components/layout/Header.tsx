@@ -15,32 +15,22 @@ export const Header: React.FC = () => {
     <header className="fixed top-0 w-full z-50 py-3 px-4 md:px-6 transition-all duration-300">
       <Glassmorphism className="py-3 px-4">
         <nav className="flex items-center justify-between">
-          <Link href="/">
-            <a className="flex items-center text-blue-500 dark:text-blue-400 font-bold text-2xl">
-              basics-AI
-            </a>
+          <Link href="/" className="flex items-center text-blue-500 dark:text-blue-400 font-bold text-2xl">
+            basics-AI
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/">
-              <a className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                Home
-              </a>
+            <Link href="/" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+              Home
             </Link>
-            <Link href="/topics">
-              <a className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                Topics
-              </a>
+            <Link href="/topics" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+              Topics
             </Link>
-            <Link href="/resources">
-              <a className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                Resources
-              </a>
+            <Link href="/resources" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+              Resources
             </Link>
-            <Link href="/about">
-              <a className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                About
-              </a>
+            <Link href="/about" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+              About
             </Link>
           </div>
 
