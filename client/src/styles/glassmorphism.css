@@ -3,22 +3,57 @@
 @tailwind utilities;
 
 @layer utilities {
+  /* Enhanced Glassmorphism Effects */
   .glassmorphism-light {
-    @apply bg-white/70 backdrop-blur-md border border-white/30 shadow-lg;
+    @apply bg-white/70 backdrop-blur-lg border border-white/30 shadow-lg;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
   }
   
   .glassmorphism-dark {
-    @apply bg-gray-900/60 backdrop-blur-md border border-gray-800/30 shadow-lg;
+    @apply bg-gray-900/60 backdrop-blur-lg border border-gray-800/30 shadow-lg;
+    background-image: linear-gradient(135deg, rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.5));
+  }
+  
+  /* Horizontal Glassmorphism Effect */
+  .horizontal-glass {
+    @apply backdrop-blur-xl;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .horizontal-glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+    pointer-events: none;
+    background: linear-gradient(90deg, 
+      rgba(255, 255, 255, 0.1), 
+      rgba(255, 255, 255, 0.2) 10%, 
+      rgba(255, 255, 255, 0.1) 20%, 
+      rgba(255, 255, 255, 0) 30%);
+    filter: blur(8px);
+  }
+  
+  .dark .horizontal-glass::before {
+    background: linear-gradient(90deg, 
+      rgba(255, 255, 255, 0.05), 
+      rgba(255, 255, 255, 0.1) 10%, 
+      rgba(255, 255, 255, 0.05) 20%, 
+      rgba(255, 255, 255, 0) 30%);
   }
   
   /* For browsers that don't support backdrop-filter */
   @supports not (backdrop-filter: blur(12px)) {
     .glassmorphism-light {
-      @apply bg-white/90;
+      @apply bg-white/95;
     }
     
     .glassmorphism-dark {
-      @apply bg-gray-900/85;
+      @apply bg-gray-900/90;
     }
   }
   
@@ -62,7 +97,8 @@
   /* Premium Search Bar Styles */
   .search-bar-focus {
     transform: scale(1.02);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1), 0 8px 10px -6px rgba(59, 130, 246, 0.1);
+    transition: all 0.3s ease-in-out;
   }
   
   .search-button-gradient {
@@ -87,7 +123,7 @@
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
     transform: translateX(-100%);
-    animation: shine 3s infinite;
+    animation: shine 4s infinite;
   }
   
   /* Navigation Menu Styling */
@@ -97,7 +133,7 @@
   }
   
   .nav-link:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
   }
   
   .nav-link::after {
@@ -108,39 +144,63 @@
     bottom: -4px;
     left: 0;
     background-color: #3b82f6; /* Blue color */
-    transition: width 0.3s ease;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7;
   }
   
   .nav-link:hover::after,
   .nav-link.active::after {
     width: 100%;
+    opacity: 1;
   }
   
   .nav-link.active {
     color: #3b82f6; /* Blue color */
+    font-weight: 500;
   }
   
   /* Theme Toggle Hover */
   .theme-toggle-btn {
-    transition: transform 0.3s ease, color 0.2s ease;
+    transition: transform 0.3s ease, background-color 0.2s ease, color 0.2s ease;
   }
   
   .theme-toggle-btn:hover {
-    transform: scale(1.15);
+    transform: scale(1.15) rotate(5deg);
     color: #3b82f6; /* Blue color */
+    background-color: rgba(219, 234, 254, 0.1); /* Light blue background for hover state */
   }
   
   /* Button Gradient Effects */
   .btn-gradient {
     position: relative;
     overflow: hidden;
+    z-index: 1;
     transition: all 0.3s ease;
   }
   
-  .btn-gradient:hover {
-    transform: scale(1.05);
+  .btn-gradient:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     background: linear-gradient(to right, #3b82f6, #6366f1);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    transition: opacity 0.3s ease;
+  }
+  
+  .btn-gradient:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3), 0 8px 10px -6px rgba(59, 130, 246, 0.2);
+  }
+  
+  .btn-gradient:hover:before {
+    background: linear-gradient(to right, #2563eb, #4f46e5);
+  }
+  
+  .btn-gradient:active {
+    transform: translateY(1px) scale(0.99);
   }
   
   .btn-gradient::after {
@@ -152,7 +212,18 @@
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
     transform: translateX(-100%);
-    animation: shine 3s infinite;
+    z-index: 2;
+    animation: shine 4s infinite;
+  }
+  
+  /* Social Media Icons Hover */
+  .social-icon-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon-hover:hover {
+    transform: translateY(-3px) scale(1.1);
+    filter: drop-shadow(0 4px 6px rgba(59, 130, 246, 0.2));
   }
 }
 

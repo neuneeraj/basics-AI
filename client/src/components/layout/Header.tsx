@@ -19,15 +19,15 @@ export const Header: React.FC = () => {
 
   // Generate nav link classes based on active state
   const getNavLinkClass = (path: string) => {
-    return `nav-link text-gray-800 dark:text-gray-200 ${isActive(path) ? "active" : ""}`;
+    return `nav-link text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-all px-1 py-1 ${isActive(path) ? "active" : ""}`;
   };
 
   return (
     <header className="fixed top-0 w-full z-50 py-3 px-4 md:px-6 transition-all duration-300">
       <Glassmorphism className="py-3 px-4">
         <nav className="flex items-center justify-between">
-          <Link href="/" className="flex items-center text-blue-500 dark:text-blue-400 font-bold text-2xl">
-            basics-AI
+          <Link href="/" className="flex items-center text-blue-500 dark:text-blue-400 font-bold text-2xl hover:scale-105 transition-transform">
+            <span className="hover:text-blue-600 dark:hover:text-blue-300 transition-colors">basics-AI</span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
