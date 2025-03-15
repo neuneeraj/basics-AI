@@ -75,61 +75,61 @@ export const AnimatedLogo: React.FC = () => {
             cy="120" 
             r="40" 
             stroke="currentColor" 
-            strokeWidth="5" 
+            strokeWidth="6" 
             fill="none" 
           />
           
           {/* Horizontal connections */}
-          <line x1="20" y1="120" x2="80" y2="120" stroke="currentColor" strokeWidth="3" />
-          <line x1="160" y1="120" x2="220" y2="120" stroke="currentColor" strokeWidth="3" />
+          <line x1="20" y1="120" x2="80" y2="120" stroke="currentColor" strokeWidth="5" />
+          <line x1="160" y1="120" x2="220" y2="120" stroke="currentColor" strokeWidth="5" />
           
           {/* Vertical connections */}
-          <line x1="120" y1="20" x2="120" y2="80" stroke="currentColor" strokeWidth="3" />
-          <line x1="120" y1="160" x2="120" y2="220" stroke="currentColor" strokeWidth="3" />
+          <line x1="120" y1="20" x2="120" y2="80" stroke="currentColor" strokeWidth="5" />
+          <line x1="120" y1="160" x2="120" y2="220" stroke="currentColor" strokeWidth="5" />
           
           {/* Diagonal lines at 45 degrees - top left */}
-          <line x1="48" y1="48" x2="90" y2="90" stroke="currentColor" strokeWidth="3" />
-          <line x1="35" y1="70" x2="70" y2="95" stroke="currentColor" strokeWidth="3" />
+          <line x1="48" y1="48" x2="90" y2="90" stroke="currentColor" strokeWidth="5" />
+          <line x1="35" y1="70" x2="70" y2="95" stroke="currentColor" strokeWidth="5" />
           
           {/* Diagonal lines - top right */}
-          <line x1="192" y1="48" x2="150" y2="90" stroke="currentColor" strokeWidth="3" />
-          <line x1="205" y1="70" x2="170" y2="95" stroke="currentColor" strokeWidth="3" />
+          <line x1="192" y1="48" x2="150" y2="90" stroke="currentColor" strokeWidth="5" />
+          <line x1="205" y1="70" x2="170" y2="95" stroke="currentColor" strokeWidth="5" />
           
           {/* Diagonal lines - bottom left */}
-          <line x1="48" y1="192" x2="90" y2="150" stroke="currentColor" strokeWidth="3" />
-          <line x1="35" y1="170" x2="70" y2="145" stroke="currentColor" strokeWidth="3" />
+          <line x1="48" y1="192" x2="90" y2="150" stroke="currentColor" strokeWidth="5" />
+          <line x1="35" y1="170" x2="70" y2="145" stroke="currentColor" strokeWidth="5" />
           
           {/* Diagonal lines - bottom right */}
-          <line x1="192" y1="192" x2="150" y2="150" stroke="currentColor" strokeWidth="3" />
-          <line x1="205" y1="170" x2="170" y2="145" stroke="currentColor" strokeWidth="3" />
+          <line x1="192" y1="192" x2="150" y2="150" stroke="currentColor" strokeWidth="5" />
+          <line x1="205" y1="170" x2="170" y2="145" stroke="currentColor" strokeWidth="5" />
           
           {/* Additional connections to match the example image */}
-          <line x1="60" y1="60" x2="60" y2="20" stroke="currentColor" strokeWidth="3" />
-          <line x1="180" y1="60" x2="180" y2="20" stroke="currentColor" strokeWidth="3" />
-          <line x1="60" y1="180" x2="60" y2="220" stroke="currentColor" strokeWidth="3" />
-          <line x1="180" y1="180" x2="180" y2="220" stroke="currentColor" strokeWidth="3" />
+          <line x1="60" y1="60" x2="60" y2="20" stroke="currentColor" strokeWidth="5" />
+          <line x1="180" y1="60" x2="180" y2="20" stroke="currentColor" strokeWidth="5" />
+          <line x1="60" y1="180" x2="60" y2="220" stroke="currentColor" strokeWidth="5" />
+          <line x1="180" y1="180" x2="180" y2="220" stroke="currentColor" strokeWidth="5" />
           
-          {/* Endpoint dots/circles - cardinal directions */}
-          <circle cx="20" cy="120" r="5" fill="currentColor" />
-          <circle cx="220" cy="120" r="5" fill="currentColor" />
-          <circle cx="120" cy="20" r="5" fill="currentColor" />
-          <circle cx="120" cy="220" r="5" fill="currentColor" />
+          {/* Endpoint dots/circles - cardinal directions - 3x larger */}
+          <circle cx="20" cy="120" r="15" fill="currentColor" />
+          <circle cx="220" cy="120" r="15" fill="currentColor" />
+          <circle cx="120" cy="20" r="15" fill="currentColor" />
+          <circle cx="120" cy="220" r="15" fill="currentColor" />
           
-          {/* Endpoint dots - corner points */}
-          <circle cx="48" cy="48" r="5" fill="currentColor" />
-          <circle cx="192" cy="48" r="5" fill="currentColor" />
-          <circle cx="48" cy="192" r="5" fill="currentColor" />
-          <circle cx="192" cy="192" r="5" fill="currentColor" />
+          {/* Endpoint dots - corner points - 3x larger */}
+          <circle cx="48" cy="48" r="15" fill="currentColor" />
+          <circle cx="192" cy="48" r="15" fill="currentColor" />
+          <circle cx="48" cy="192" r="15" fill="currentColor" />
+          <circle cx="192" cy="192" r="15" fill="currentColor" />
           
-          {/* Additional endpoint dots to match example image */}
-          <circle cx="60" cy="20" r="4" fill="currentColor" />
-          <circle cx="180" cy="20" r="4" fill="currentColor" />
-          <circle cx="60" cy="220" r="4" fill="currentColor" />
-          <circle cx="180" cy="220" r="4" fill="currentColor" />
-          <circle cx="35" cy="70" r="4" fill="currentColor" />
-          <circle cx="205" cy="70" r="4" fill="currentColor" />
-          <circle cx="35" cy="170" r="4" fill="currentColor" />
-          <circle cx="205" cy="170" r="4" fill="currentColor" />
+          {/* Additional endpoint dots to match example image - 3x larger */}
+          <circle cx="60" cy="20" r="12" fill="currentColor" />
+          <circle cx="180" cy="20" r="12" fill="currentColor" />
+          <circle cx="60" cy="220" r="12" fill="currentColor" />
+          <circle cx="180" cy="220" r="12" fill="currentColor" />
+          <circle cx="35" cy="70" r="12" fill="currentColor" />
+          <circle cx="205" cy="70" r="12" fill="currentColor" />
+          <circle cx="35" cy="170" r="12" fill="currentColor" />
+          <circle cx="205" cy="170" r="12" fill="currentColor" />
         </svg>
       </div>
 

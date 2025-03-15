@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "wouter";
 import { Glassmorphism } from "../ui/glassmorphism";
 import { AnimatedLogo } from "./AnimatedLogo";
+import { PremiumSearch } from "../ui/premium-search";
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="pt-32 pb-20 px-4 md:px-6">
+    <section className="pt-24 pb-20 px-4 md:px-6">
+      {/* Premium search bar positioned between header and hero content */}
+      <div className="mb-8 relative z-10">
+        <PremiumSearch />
+      </div>
+      
       <div className="container mx-auto text-center">
         <Glassmorphism className="px-6 py-14 mb-8">
           <div className="mb-8 flex justify-center">
