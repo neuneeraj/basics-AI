@@ -3,35 +3,29 @@ import { Brain } from "lucide-react";
 
 export const AnimatedLogo: React.FC = () => {
   const [activeIcon, setActiveIcon] = useState<"circuit" | "brain">("circuit");
-  const [animationState, setAnimationState] = useState<"idle" | "fadeOut" | "fadeIn">("idle");
+  const [animationState, setAnimationState] = useState<"idle" | "transitioning">("idle");
 
   useEffect(() => {
-    // Animation cycle:
-    // 1. Stay on one icon for a few seconds
-    // 2. Fade out current icon + slight zoom out
-    // 3. Switch icons
-    // 4. Fade in new icon + slight zoom in
-    // 5. Return to idle state
-    // 6. Repeat
-
     const animationCycle = () => {
-      // Start fade out
-      setAnimationState("fadeOut");
+      // Start smooth transition
+      setAnimationState("transitioning");
       
-      // After fade out, switch icons
+      // Switch icons after fade transition is halfway through for smoothest effect
       setTimeout(() => {
         setActiveIcon((prev) => (prev === "circuit" ? "brain" : "circuit"));
-        setAnimationState("fadeIn");
-        
-        // After fade in, go back to idle
-        setTimeout(() => {
-          setAnimationState("idle");
-        }, 1000);
-      }, 1000);
+      }, 800); // Switch halfway through the ultra-smooth transition
+      
+      // End transition after full animation completes
+      setTimeout(() => {
+        setAnimationState("idle");
+      }, 1600);
     };
 
-    // Run animation every 6 seconds
-    const intervalId = setInterval(animationCycle, 6000);
+    // Run animation every 2.8 seconds (show each icon for ~2.3s)
+    const intervalId = setInterval(animationCycle, 2800);
+
+    // Start first cycle
+    animationCycle();
 
     return () => {
       clearInterval(intervalId);
@@ -40,72 +34,79 @@ export const AnimatedLogo: React.FC = () => {
 
   return (
     <div className="relative h-20 w-20 mx-auto">
-      {/* Circuit Icon */}
+      {/* Circuit Icon - Exact match from provided image */}
       <div
-        className={`absolute inset-0 flex items-center justify-center text-blue-500 transition-all duration-1000 ease-in-out
+        className={`absolute inset-0 flex items-center justify-center text-blue-500 ultra-smooth-transition
           ${activeIcon === "circuit" 
             ? "opacity-100 transform scale-100" 
-            : "opacity-0 transform scale-95 pointer-events-none"}
-          ${animationState === "fadeOut" && activeIcon === "circuit" ? "opacity-0 transform scale-95" : ""}
-          ${animationState === "fadeIn" && activeIcon === "circuit" ? "opacity-100 transform scale-100" : ""}`}
+            : "opacity-0 transform scale-97 pointer-events-none"}`}
       >
         <svg 
-          viewBox="0 0 24 24" 
+          viewBox="0 0 100 100" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg" 
           className="w-full h-full"
         >
+          {/* Square with rounded corners - matched to the provided image */}
           <rect 
-            x="2" 
-            y="2" 
-            width="20" 
-            height="20" 
-            rx="3" 
+            x="12" 
+            y="12" 
+            width="76" 
+            height="76" 
+            rx="10" 
             stroke="currentColor" 
-            strokeWidth="2" 
+            strokeWidth="6" 
             fill="none" 
           />
+          
+          {/* Top-left circle */}
           <circle 
-            cx="7" 
-            cy="7" 
-            r="1.5" 
+            cx="33" 
+            cy="33" 
+            r="5" 
             stroke="currentColor" 
-            strokeWidth="2" 
+            strokeWidth="6" 
             fill="none" 
           />
+          
+          {/* Bottom-right circle */}
           <circle 
-            cx="17" 
-            cy="17" 
-            r="1.5" 
+            cx="67" 
+            cy="67" 
+            r="5" 
             stroke="currentColor" 
-            strokeWidth="2" 
+            strokeWidth="6" 
             fill="none" 
           />
+          
+          {/* Top connection path */}
           <path 
-            d="M7 7H12C14.2091 7 16 8.79086 16 11V17" 
+            d="M33 33H50C60 33 67 40 67 50V67" 
             stroke="currentColor" 
-            strokeWidth="2" 
+            strokeWidth="6" 
             fill="none" 
+            strokeLinecap="round"
           />
+          
+          {/* Bottom connection path */}
           <path 
-            d="M17 17H12C9.79086 17 8 15.2091 8 13V7" 
+            d="M67 67H50C40 67 33 60 33 50V33" 
             stroke="currentColor" 
-            strokeWidth="2" 
+            strokeWidth="6" 
             fill="none" 
+            strokeLinecap="round"
           />
         </svg>
       </div>
 
       {/* Brain Icon */}
       <div
-        className={`absolute inset-0 flex items-center justify-center text-blue-500 transition-all duration-1000 ease-in-out
+        className={`absolute inset-0 flex items-center justify-center text-blue-500 ultra-smooth-transition
           ${activeIcon === "brain" 
             ? "opacity-100 transform scale-100" 
-            : "opacity-0 transform scale-95 pointer-events-none"}
-          ${animationState === "fadeOut" && activeIcon === "brain" ? "opacity-0 transform scale-95" : ""}
-          ${animationState === "fadeIn" && activeIcon === "brain" ? "opacity-100 transform scale-100" : ""}`}
+            : "opacity-0 transform scale-97 pointer-events-none"}`}
       >
-        <Brain className="w-full h-full" />
+        <Brain className="w-full h-full" strokeWidth={1.5} />
       </div>
     </div>
   );
