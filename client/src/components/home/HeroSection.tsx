@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
-import { Brain } from "lucide-react";
 import { Glassmorphism } from "../ui/glassmorphism";
+import { AnimatedLogo } from "./AnimatedLogo";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -9,9 +9,7 @@ export const HeroSection: React.FC = () => {
       <div className="container mx-auto text-center">
         <Glassmorphism className="px-6 py-14 mb-8">
           <div className="mb-8 flex justify-center">
-            <div className="h-20 w-20 rounded text-blue-500">
-              <Brain className="w-full h-full" />
-            </div>
+            <AnimatedLogo />
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900 dark:text-white">
