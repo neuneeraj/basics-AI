@@ -8,10 +8,8 @@ export const Footer: React.FC = () => {
       <Glassmorphism className="px-6 py-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <Link href="/">
-              <a className="flex items-center text-blue-500 dark:text-blue-400 font-bold text-xl mb-4">
-                basics-AI
-              </a>
+            <Link href="/" className="flex items-center text-blue-500 dark:text-blue-400 font-bold text-xl mb-4">
+              basics-AI
             </Link>
             <p className="mb-4">
               Making artificial intelligence and machine learning accessible to everyone.
@@ -59,36 +57,24 @@ export const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-white">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
+                <Link href="/resources" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                   Tutorials
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
+                <Link href="/resources" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                   Documentation
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
+                <Link href="/resources" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                   Guides
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
+                <Link href="/resources" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                   API Reference
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -97,44 +83,29 @@ export const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-white">Topics</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
+                <Link href="/topics" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                   Machine Learning
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
+                <Link href="/topics" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                   Neural Networks
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
+                <Link href="/topics" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                   Deep Learning
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
+                <Link href="/topics" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                   Computer Vision
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
+                <Link href="/topics" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                   Natural Language Processing
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -143,44 +114,29 @@ export const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-white">Company</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
+                <Link href="/about" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
+                <Link href="/about" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                   Team
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
+                <Link href="/about" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
+                <Link href="/about" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >
+                <Link href="/about" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

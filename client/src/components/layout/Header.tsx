@@ -51,25 +51,17 @@ export const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
             <nav className="flex flex-col space-y-4">
-              <Link href="/">
-                <a className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                  Home
-                </a>
+              <Link href="/" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                Home
               </Link>
-              <Link href="/topics">
-                <a className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                  Topics
-                </a>
+              <Link href="/topics" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                Topics
               </Link>
-              <Link href="/resources">
-                <a className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                  Resources
-                </a>
+              <Link href="/resources" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                Resources
               </Link>
-              <Link href="/about">
-                <a className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                  About
-                </a>
+              <Link href="/about" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                About
               </Link>
             </nav>
           </div>
