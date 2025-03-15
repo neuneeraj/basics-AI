@@ -30,11 +30,11 @@ export const HeroSection: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link href="/topics" className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full transition-colors">
-              Explore Topics
+            <Link href="/topics" className="px-8 py-3 bg-blue-500 text-white font-semibold rounded-full btn-gradient button-shine transition-all duration-300">
+              <span className="relative z-10">Explore Topics</span>
             </Link>
-            <Link href="/resources" className="px-8 py-3 bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 font-semibold rounded-full transition-colors">
-              Resources
+            <Link href="/resources" className="px-8 py-3 bg-blue-500 text-white font-semibold rounded-full btn-gradient button-shine transition-all duration-300">
+              <span className="relative z-10">Resources</span>
             </Link>
           </div>
         </Glassmorphism>

@@ -1,14 +1,25 @@
 import React, { useState } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { ThemeToggle } from "../ui/theme-toggle";
 import { Menu, X } from "lucide-react";
 import { Glassmorphism } from "../ui/glassmorphism";
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [location] = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Function to check if a link is active
+  const isActive = (path: string) => {
+    return location === path;
+  };
+
+  // Generate nav link classes based on active state
+  const getNavLinkClass = (path: string) => {
+    return `nav-link text-gray-800 dark:text-gray-200 ${isActive(path) ? "active" : ""}`;
   };
 
   return (
@@ -20,16 +31,16 @@ export const Header: React.FC = () => {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+            <Link href="/" className={getNavLinkClass("/")}>
               Home
             </Link>
-            <Link href="/topics" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+            <Link href="/topics" className={getNavLinkClass("/topics")}>
               Topics
             </Link>
-            <Link href="/resources" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+            <Link href="/resources" className={getNavLinkClass("/resources")}>
               Resources
             </Link>
-            <Link href="/about" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+            <Link href="/about" className={getNavLinkClass("/about")}>
               About
             </Link>
           </div>
@@ -51,16 +62,16 @@ export const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
             <nav className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+              <Link href="/" className={getNavLinkClass("/")}>
                 Home
               </Link>
-              <Link href="/topics" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+              <Link href="/topics" className={getNavLinkClass("/topics")}>
                 Topics
               </Link>
-              <Link href="/resources" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+              <Link href="/resources" className={getNavLinkClass("/resources")}>
                 Resources
               </Link>
-              <Link href="/about" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+              <Link href="/about" className={getNavLinkClass("/about")}>
                 About
               </Link>
             </nav>

@@ -1,0 +1,41 @@
+ONLY CHANGE WHAT IS EXPLICITLY MENTIONED HERE. KEEP ORIGINAL INTACT ! KEEP EVERYOTHER EFFECT DESIGN AND LAYOUT INTACT AND ON THE TOP ADD THESE : 
+WHEN WE HOVER OVER HOME, TOPICS, RESOURCES, ABOUT, MAKE SURE IT HAS SUBTLE CREAMY SMOOTH HOVER ZOOM EFFECT AND ALSO 
+UNDER LINE IS SMOOTHLY RUNS UNDERNEATH THESE WORDS WITH OUR SIGNATURE BLUE COLOUR (BLUE CLOUR WHICH WE HAVE USED IN OUR WEBSITE)
+AND THIS UNDER LINE REMAINS AND VISIBLE WHEN WE CLICK THIS MENU/TAB/BUTTON (WHATEVER WE CALL IT) . IT REAMINS UNDERLINED TILL WE STAY IN THIS PAGE OR UNTIL 
+THIS RAMAINED CLICKED. AND ONCE WE CLICKED THE OTHER TAB/MENU THAT PREVIOUS UNDERLINES GOES AWAYA (SOOOTHLY AND SUBTLY) 
+AND NOW THE UNDERLINE EFFECT IS VISIBLE AND SEEN TO THE NEXT TAB/BUTTON/MENU WHICH IS HOVERD OR CLICKED.                                
+SIMILARLY WHEN WE HOVER OVER MODE TOGGLE ICON ON THE TOP RIGHT CORNER OF THE PAGE THE ZOOM HOVER EEFECT SHOULD ALSO BE APPLIED HERE. THE HOVER
+SHOULD CHANGE THE COLOUR TO BLUE WHILE ONLY DURING HOVER (NO UNDERLINE HERE, UNDERLINE IS ONLY FOR MENU/TAB ONLY) 
+MAKE SURE THIS HOVER IF EFFECTIVE AND APPLICABLE FOR BOTH LIGHT AND DARK MODE FOR ALL MENTIONED ABOVE !
+
+ONLY CHANGE WHAT IS EXPLICITLY MENTIONED HERE. DONT CHANGE A SINGLE ITEM OR DESIGN FEATURES FUNCTIONAITY WHAT IT NOT EXPLICITLY MENTIONED HERE KEEP 
+EVERYTHING INTACT!
+KEEPY EVERYTHING EVERYTHING EFFECT DESING LAYOUT COLOUR INTACT FOR SEARCH BAR , JUST MAKE THIS BAR LITTLE BIT LONGER AND LITTLE BIT WIDER. REST EVERYTHING INTACT.  
+CHANGE THE WORD "Analyzer" to "Search" keep colour effect gradient effect desing everything intact!  change the "gear" icon to different icon unique icon
+like i had supplied u in the attachment and again have supplied u in attachment look at it and use the same unique icon.
+last time you didnt implement the options to include "Google" "Basics-ai.com" "Bing" "yahoo" "DuckDuckgo" ! When we click on "gear" icon no list is displayed to select these 5 options.
+make sure this time when we click the gear icon (but this time change this gear icon with somthing really related good and unique icon) it provides 5 options to choose from in the same 
+order as mentioned above. make sure by default "Google" is on top and it is selected by default and on the second list our website "basics-ai.com" is listed and so on.
+make sure WHEN ANY ONE OF THEN IS CLICKED
+IT LINKS TO THEM FOR SEARCH RESULTS. AND WHEN "BASICS-AI.COM" IS CLICKED USERS CAN SEARCH THE CONTENTS AND TITLES ANYWHERE FORM OUR WEBSITE AND IT PROVIDES
+THE BEST HINT AND TITLES , ARTICLES AND WHATEVER IS PRESESNT IN OUT WEBSITE RELATED TO WORDS , KEYWORDS WHAT USER HAS TYPED AND CLICKED SEARCH FOR.
+IN A SYSTEMATIC CHRONOLOGICAL ADN CLEAN MINIMAL STRUCTURED AND BEST WAY POSSIBLE !
+its good effect that when we click the search bar it gets blurred like that and its cool effect but after clicking it and puting text in input areaa of this bar thee
+text is also blurred , while we keep on typing in this input area the text are seems blurred too. make sure text are not blurred while typing rest is ok. make sure only 
+tex being blurred while typing is removed ! reset everything keep intact !
+ 
+
+Add two more social media icons (face book and instagram) at the bottom left corner of the page where other social media icons are present.use the same, colour layout and design
+for these 2 new icons what u have already used before. 
+
+"understanding transformer models in nlp" has an image placeholder and image is missing here. other two titles besides it has good images but this 
+has image missing so place a very effective and related image to this with the design layout what it needs and what is already there ! 
+
+make sure there two buttons "Explore Topics" and "Resources" both are initially blue in colour (blue button white text) normally and when we hover 
+Let it have smooth hover zoom effect and let the blue colur gets more shiny glassy effect and changes the button and effects glittery and shiny effect exact like 
+"analyzer" button.  make sure these two above buttons in the begining are normal blue button when not hovered but as soon as we hover it it has 
+the effects of zoom hover and shiny glittery gradient effect exactly like "analyzer" button !
+
+make sure all other design layout colour , effects, gradient text and information everything is intact other than mentioned explicitly in the above request.
+make sure double check it and be 100% sure that u implement all the above mentioned corrections and requests!
+

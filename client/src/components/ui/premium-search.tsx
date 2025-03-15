@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Search, ChevronDown, Settings } from "lucide-react";
+import { Search } from "lucide-react";
 import { useTheme } from "@/lib/ThemeProvider";
 
-type SearchEngine = "basics-ai" | "google" | "yahoo" | "bing" | "duckduckgo";
+type SearchEngine = "google" | "basics-ai" | "bing" | "yahoo" | "duckduckgo";
 
 interface SearchEngineOption {
   id: SearchEngine;
@@ -12,24 +12,24 @@ interface SearchEngineOption {
 
 const searchEngines: SearchEngineOption[] = [
   {
-    id: "basics-ai",
-    name: "Basics-AI.com",
-    searchUrl: "https://basics-ai.com/search?q="
-  },
-  {
     id: "google",
     name: "Google",
     searchUrl: "https://www.google.com/search?q="
   },
   {
-    id: "yahoo",
-    name: "Yahoo",
-    searchUrl: "https://search.yahoo.com/search?p="
+    id: "basics-ai",
+    name: "Basics-AI.com",
+    searchUrl: "https://basics-ai.com/search?q="
   },
   {
     id: "bing",
     name: "Bing",
     searchUrl: "https://www.bing.com/search?q="
+  },
+  {
+    id: "yahoo",
+    name: "Yahoo",
+    searchUrl: "https://search.yahoo.com/search?p="
   },
   {
     id: "duckduckgo",
@@ -83,15 +83,15 @@ export const PremiumSearch: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto px-4 py-6">
+    <div className="w-full max-w-4xl mx-auto px-4 py-6">
       <div 
         className={`relative flex items-center transition-all duration-500 ease-in-out
           ${theme === "dark" ? "glassmorphism-dark" : "glassmorphism-light"}
           ${isFocused ? "search-bar-focus" : ""}
-          rounded-full p-1 pr-2 overflow-hidden shadow-lg`}
+          rounded-full p-1 pr-2 overflow-hidden shadow-lg h-16`}
       >
         {/* Search icon */}
-        <div className="flex-shrink-0 pl-3 pr-2">
+        <div className="flex-shrink-0 pl-4 pr-3">
           <Search className="h-5 w-5 text-gray-400" />
         </div>
         
@@ -105,8 +105,9 @@ export const PremiumSearch: React.FC = () => {
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
             placeholder="Enter a keyword to analyze..."
-            className={`flex-grow bg-transparent border-none outline-none py-3 px-2 text-base
-              ${theme === "dark" ? "text-gray-200 placeholder-gray-400" : "text-gray-700 placeholder-gray-500"}`}
+            className={`flex-grow bg-transparent border-none outline-none py-3 px-2 text-base backdrop-blur-none
+              ${theme === "dark" ? "text-gray-100 placeholder-gray-400" : "text-gray-700 placeholder-gray-500"}`}
+            style={{ backdropFilter: "none" }}
           />
           
           {/* Search engine selector button */}
@@ -116,9 +117,16 @@ export const PremiumSearch: React.FC = () => {
               onClick={toggleDropdown}
               className={`flex items-center justify-center h-8 w-8 rounded-full
                 ${theme === "dark" ? "bg-gray-700/50 hover:bg-gray-600/50" : "bg-gray-200/50 hover:bg-gray-300/50"}
-                transition-all duration-200`}
+                transition-all duration-200 theme-toggle-btn`}
+              aria-label="Select search engine"
             >
-              <Settings className="h-4 w-4 text-gray-500" />
+              {/* Sliders Icon from attachment */}
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" strokeWidth="2" className="text-gray-500">
+                <line x1="4" y1="8" x2="20" y2="8"></line>
+                <line x1="4" y1="16" x2="20" y2="16"></line>
+                <line x1="8" y1="4" x2="8" y2="12"></line>
+                <line x1="16" y1="12" x2="16" y2="20"></line>
+              </svg>
             </button>
             
             {/* Dropdown for search engines */}
@@ -178,11 +186,11 @@ export const PremiumSearch: React.FC = () => {
           {/* Submit button with gradient */}
           <button
             type="submit"
-            className={`button-shine relative rounded-full px-6 py-2.5 text-sm font-medium text-white
+            className={`button-shine relative rounded-full px-8 py-3 text-sm font-medium text-white
               transition-all duration-300 ease-in-out search-button-gradient
               hover:shadow-lg hover:scale-[1.03] active:scale-[0.97] active:shadow-inner`}
           >
-            <span className="relative z-10">Analyze</span>
+            <span className="relative z-10">Search</span>
           </button>
         </form>
       </div>

@@ -89,6 +89,71 @@
     transform: translateX(-100%);
     animation: shine 3s infinite;
   }
+  
+  /* Navigation Menu Styling */
+  .nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    transform: scale(1.05);
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #3b82f6; /* Blue color */
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+  
+  .nav-link.active {
+    color: #3b82f6; /* Blue color */
+  }
+  
+  /* Theme Toggle Hover */
+  .theme-toggle-btn {
+    transition: transform 0.3s ease, color 0.2s ease;
+  }
+  
+  .theme-toggle-btn:hover {
+    transform: scale(1.15);
+    color: #3b82f6; /* Blue color */
+  }
+  
+  /* Button Gradient Effects */
+  .btn-gradient {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-gradient:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #3b82f6, #6366f1);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+  
+  .btn-gradient::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%);
+    animation: shine 3s infinite;
+  }
 }
 
 /* Global Animation Keyframes */
