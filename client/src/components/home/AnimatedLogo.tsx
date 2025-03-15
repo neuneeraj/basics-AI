@@ -179,8 +179,8 @@ export const AnimatedLogo: React.FC = () => {
               ? "opacity-100 transform scale-100" 
               : "opacity-0 transform scale-97 pointer-events-none"}`}
         >
-          <div className="relative">
-            <Brain className="w-full h-full filter drop-shadow-lg" strokeWidth={1.5} />
+          <div className="relative" style={{ width: '100%', height: '100%' }}>
+            <Brain className="w-full h-full filter drop-shadow-lg" strokeWidth={1.5} style={{ width: '100%', height: '100%' }} />
             {/* Subtle glow effect around brain icon */}
             <div 
               className="absolute inset-0 opacity-40"

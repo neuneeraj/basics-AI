@@ -166,8 +166,19 @@
   
   .theme-toggle-btn:hover {
     transform: scale(1.15) rotate(5deg);
-    color: #3b82f6; /* Blue color */
+    color: #3b82f6 !important; /* Blue color */
     background-color: rgba(219, 234, 254, 0.1); /* Light blue background for hover state */
+  }
+  
+  /* Search Engine Toggle Button */
+  .search-engine-toggle {
+    transition: transform 0.3s ease, color 0.2s ease;
+    background-color: rgba(219, 234, 254, 0.1);
+  }
+  
+  .search-engine-toggle:hover {
+    transform: scale(1.15);
+    color: #3b82f6 !important; /* Blue color */
   }
   
   /* Button Gradient Effects */
@@ -224,6 +235,32 @@
   .social-icon-hover:hover {
     transform: translateY(-3px) scale(1.1);
     filter: drop-shadow(0 4px 6px rgba(59, 130, 246, 0.2));
+  }
+  
+  /* Fix for blur effect on text */
+  .no-blur-text {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    filter: none !important;
+  }
+  
+  .no-blur-button {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  
+  .no-blur-content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+  }
+  
+  .dark .no-blur-content {
+    background-color: rgba(17, 24, 39, 0.95);
+    border: 1px solid rgba(75, 85, 99, 0.5);
+  }
+  
+  .dropdown-menu {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   }
 }
 

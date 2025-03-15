@@ -105,78 +105,69 @@ export const PremiumSearch: React.FC = () => {
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
             placeholder="Enter a keyword to analyze..."
-            className={`flex-grow bg-transparent border-none outline-none py-3 px-2 text-base backdrop-blur-none
+            className={`flex-grow bg-transparent border-none outline-none py-3 px-2 text-base no-blur-text
               ${theme === "dark" ? "text-gray-100 placeholder-gray-400" : "text-gray-700 placeholder-gray-500"}`}
-            style={{ backdropFilter: "none" }}
           />
           
           {/* Search engine selector button */}
           <div className="relative mr-3" ref={dropdownRef}>
-            <button
-              type="button"
-              onClick={toggleDropdown}
-              className={`flex items-center justify-center h-8 w-8 rounded-full
-                ${theme === "dark" ? "bg-gray-700/50 hover:bg-gray-600/50" : "bg-gray-200/50 hover:bg-gray-300/50"}
-                transition-all duration-200 theme-toggle-btn`}
-              aria-label="Select search engine"
-            >
-              {/* Sliders Icon from attachment */}
-              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" strokeWidth="2" className="text-gray-500">
-                <line x1="4" y1="8" x2="20" y2="8"></line>
-                <line x1="4" y1="16" x2="20" y2="16"></line>
-                <line x1="8" y1="4" x2="8" y2="12"></line>
-                <line x1="16" y1="12" x2="16" y2="20"></line>
-              </svg>
-            </button>
+            <div className="flex items-center space-x-2">
+              <span className="text-sm mr-1 no-blur-text">
+                {selectedEngine.name}
+              </span>
+              <button
+                type="button"
+                onClick={toggleDropdown}
+                className="search-engine-toggle flex items-center justify-center h-8 w-8 rounded-full
+                  transition-all duration-200"
+                aria-label="Select search engine"
+              >
+                {/* Sliders Icon from attachment */}
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" strokeWidth="2">
+                  <line x1="4" y1="8" x2="20" y2="8"></line>
+                  <line x1="4" y1="16" x2="20" y2="16"></line>
+                  <line x1="8" y1="4" x2="8" y2="12"></line>
+                  <line x1="16" y1="12" x2="16" y2="20"></line>
+                </svg>
+              </button>
+            </div>
             
             {/* Dropdown for search engines */}
             {isDropdownOpen && (
               <div 
-                className={`absolute right-0 mt-2 w-56 rounded-lg shadow-lg z-10 overflow-hidden
-                  ${theme === "dark" ? "glassmorphism-dark" : "glassmorphism-light"}
-                  backdrop-blur-lg`}
+                className="absolute right-0 mt-2 w-56 rounded-lg shadow-lg z-10 overflow-hidden
+                  dropdown-menu no-blur-content"
               >
                 <div className="p-2">
                   <div className="px-2 pt-2 pb-1 text-xs font-medium uppercase tracking-wider text-center border-b border-gray-500/20 mb-1">
-                    SEARCH REFINEMENT
+                    SEARCH ENGINE OPTIONS
                   </div>
                   
-                  <div className="p-2 space-y-2">
-                    <div className="flex items-center text-sm">
-                      <span className="mr-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
-                        </svg>
-                      </span>
-                      Search Engine
-                    </div>
-                    
-                    <div className="space-y-1">
-                      {searchEngines.map((engine) => (
-                        <button
-                          key={engine.id}
-                          type="button"
-                          onClick={() => selectSearchEngine(engine)}
-                          className={`w-full text-left px-3 py-2 text-sm rounded-md flex items-center justify-between
-                            ${selectedEngine.id === engine.id 
-                              ? theme === "dark" 
-                                ? "bg-blue-600/20 text-blue-400" 
-                                : "bg-blue-100 text-blue-700"
-                              : theme === "dark"
-                                ? "hover:bg-gray-700/40 text-gray-300"
-                                : "hover:bg-gray-200/60 text-gray-700"
-                            }
-                            transition-colors duration-150`}
-                        >
-                          {engine.name}
-                          {selectedEngine.id === engine.id && (
-                            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                          )}
-                        </button>
-                      ))}
-                    </div>
+                  <div className="p-2 space-y-1">
+                    {searchEngines.map((engine) => (
+                      <button
+                        key={engine.id}
+                        type="button"
+                        onClick={() => selectSearchEngine(engine)}
+                        className={`w-full text-left px-3 py-2 text-sm rounded-md flex items-center justify-between
+                          ${selectedEngine.id === engine.id 
+                            ? theme === "dark" 
+                              ? "bg-blue-600/20 text-blue-400" 
+                              : "bg-blue-100 text-blue-700"
+                            : theme === "dark"
+                              ? "hover:bg-gray-700/40 text-gray-300"
+                              : "hover:bg-gray-200/60 text-gray-700"
+                          }
+                          transition-colors duration-150 no-blur-text`}
+                      >
+                        {engine.name}
+                        {selectedEngine.id === engine.id && (
+                          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        )}
+                      </button>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -186,11 +177,11 @@ export const PremiumSearch: React.FC = () => {
           {/* Submit button with gradient */}
           <button
             type="submit"
-            className={`button-shine relative rounded-full px-8 py-3 text-sm font-medium text-white
+            className="button-shine relative rounded-full px-8 py-3 text-sm font-medium text-white
               transition-all duration-300 ease-in-out search-button-gradient
-              hover:shadow-lg hover:scale-[1.03] active:scale-[0.97] active:shadow-inner`}
+              hover:shadow-lg hover:scale-[1.03] active:scale-[0.97] active:shadow-inner no-blur-button"
           >
-            <span className="relative z-10">Search</span>
+            <span className="relative z-10 no-blur-text">Search</span>
           </button>
         </form>
       </div>

@@ -28,9 +28,11 @@ export const NewsletterSection: React.FC = () => {
             />
             <button
               type="submit"
-              className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
+              className="button-shine relative rounded-full px-8 py-3 text-sm font-medium text-white
+                transition-all duration-300 ease-in-out search-button-gradient
+                hover:shadow-lg hover:scale-[1.03] active:scale-[0.97] active:shadow-inner no-blur-button"
             >
-              Subscribe
+              <span className="relative z-10 no-blur-text">Subscribe</span>
             </button>
           </form>
           <p className="text-xs text-gray-500 dark:text-gray-400 mt-4">
